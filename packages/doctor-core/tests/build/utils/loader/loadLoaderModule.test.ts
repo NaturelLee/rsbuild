@@ -5,7 +5,6 @@ import { loadLoaderModule } from '@/build-utils/build/utils';
 
 describe('test src/build/utils/loader.ts loadLoaderModule()', () => {
   process.env.DOCTOR_TEST = 'true';
-
   const loaderDirectory = resolve(__dirname, '../../../fixtures/loaders');
 
   it('basic loader', () => {
