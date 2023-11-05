@@ -1,0 +1,18 @@
+{
+  "extends": "@rsbuild/tsconfig/base",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "src",
+    "tests",
+    "tests/fixtures/loaders/node_modules/raw-loader.js",
+    "tests/fixtures/loaders/basic-loader-esm.js"
+  ],
+  "exclude": ["**/node_modules"]
+}
