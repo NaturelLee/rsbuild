@@ -1,8 +1,8 @@
 ---
-'create-rsbuild': patch
+'@rsbuild/uni-builder': patch
 '@rsbuild/document': patch
 '@rsbuild/shared': patch
 '@rsbuild/core': patch
 ---
 
-feat: add default meta configs and simplify the templates
+feat: support html.inject as a function

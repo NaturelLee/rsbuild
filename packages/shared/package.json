@@ -1,6 +1,6 @@
 {
   "name": "@rsbuild/shared",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "The shared modules and dependencies of Rsbuild.",
   "homepage": "https://rsbuild.dev",
   "repository": {
@@ -107,8 +107,7 @@
   },
   "files": [
     "dist",
-    "compiled",
-    "static"
+    "compiled"
   ],
   "scripts": {
     "build": "modern build && node scripts/postCompile.js",

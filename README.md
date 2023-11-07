@@ -11,6 +11,9 @@
   <a href="https://www.npmjs.com/package/@rsbuild/shared?activeTab=readme">
    <img src="https://img.shields.io/npm/v/@rsbuild/shared?style=flat-square&colorA=564341&colorB=EDED91" alt="npm version" />
   </a>
+  <a href="https://npmcharts.com/compare/@rsbuild/core?minimal=true">
+    <img src="https://img.shields.io/npm/dm/@rsbuild/core.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="downloads" />
+  </a>
   <a href="https://github.com/web-infra-dev/rsbuild/blob/main/LICENSE">
     <img src="https://img.shields.io/npm/l/@rsbuild/shared?style=flat-square&colorA=564341&colorB=EDED91" alt="license" />
   </a>
@@ -47,7 +50,7 @@ The following diagram illustrates the relationship between Rsbuild and other too
 
 ## Getting Started
 
-You can refer to [Quick Start](https://rsbuild.dev/guide/start/quick-start.html) to start experiencing Rsbuild.
+You can refer to [Quick Start](https://rsbuild.dev/guide/start/quick-start) to start experiencing Rsbuild.
 
 Please note that the Rsbuild project is still under active development. We are still in the process of refactoring and optimizing. The documentation is not yet complete.
 

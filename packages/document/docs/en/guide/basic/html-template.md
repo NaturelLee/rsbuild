@@ -6,7 +6,7 @@ Rsbuild provides some configs to set the HTML template. Through this chapter, yo
 
 ## Set Template
 
-In Rsbuild, you can use [html.template](/config/options/html.html#htmltemplate) and [html.templateByEntries](/config/options/html.html#htmltemplatebyentries) configs to define the path to the custom HTML template.
+In Rsbuild, you can use [html.template](/config/options/html.html#htmltemplate) config to define the path to the custom HTML template.
 
 ```ts
 export default {
@@ -18,7 +18,7 @@ export default {
 
 ## Set Page Title
 
-You can set the HTML `<title>` tag through the [html.title](/config/options/html.html#htmltitle) and [html.titleByEntries](/config/options/html.html#htmltitlebyentries) configs.
+You can set the HTML `<title>` tag through the [html.title](/config/options/html.html#htmltitle) config.
 
 When there is only one page in your project, just use the `html.title` setting directly:
 
@@ -30,14 +30,17 @@ export default {
 };
 ```
 
-When there are multiple pages in your project, please use `html.titleByEntries` to set corresponding titles for different pages. `html.titleByEntries` uses the page's "entry name" as the key.
+When your project has multiple pages, you can set corresponding titles for different pages based on the entry name.
 
 ```ts
 export default {
   html: {
-    titleByEntries: {
-      foo: 'Foo',
-      bar: 'Bar',
+    title({ entryName }) {
+      const titles = {
+        foo: 'Foo',
+        bar: 'Bar',
+      };
+      return titles[entryName];
     },
   },
 };
@@ -47,7 +50,7 @@ export default {
 
 Rsbuild supports setting [favicon](https://developer.mozilla.org/en-US/docs/Glossary/Favicon) icon and [apple-touch-icon](https://webhint.io/docs/user-guide/hints/hint-apple-touch-icons/) icon.
 
-You can set the favicon through the [html.favicon](/config/options/html.html#htmlfavicon) and [html.faviconByEntries](/config/options/html.html#htmlfaviconbyentries) configs.
+You can set the favicon through the [html.favicon](/config/options/html.html#htmlfavicon) config.
 
 ```ts
 export default {
@@ -69,7 +72,7 @@ export default {
 
 ## Set Meta Tags
 
-You can set the meta tags through the [html.meta](/config/options/html.html#htmlmeta) and [html.metaByEntries](/config/options/html.html#htmlmetabyentries) configs.
+You can set the meta tags through the [html.meta](/config/options/html.html#htmlmeta) config.
 
 For example to setting description:
 

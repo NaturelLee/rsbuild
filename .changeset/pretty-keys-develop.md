@@ -4,4 +4,4 @@
 '@rsbuild/core': patch
 ---
 
-feat: support html.meta to be a function
+feat: support html.title as a function
