@@ -65,12 +65,10 @@ test('rspack data store', async () => {
   const graphData = datas.moduleGraph;
 
   os.EOL === '\n'
-    ? expect(
-        graphData.modules[0].webpackId.indexOf('tests/fixtures/a.js'),
-      ).toBeGreaterThan(0)
-    : expect(
-        graphData.modules[0].webpackId.indexOf('\\tests\\fixtures\\a.js'),
-      ).toBeGreaterThan(0);
+    ? expect(graphData.modules[0].webpackId).toContain('basic/fixtures/a.js')
+    : expect(graphData.modules[0].webpackId).toContain(
+        '\\basic\\fixtures\\a.js',
+      );
 
   graphData.modules.forEach((mod) => (mod.webpackId = ''));
   expect(graphData.modules[0].size).toEqual({
@@ -78,5 +76,5 @@ test('rspack data store', async () => {
     transformedSize: 33,
     parsedSize: 0,
   });
-  expect(graphData.modules[0].path).toMatch('tests/fixtures/a.js');
+  expect(graphData.modules[0].path).toContain('basic/fixtures/a.js');
 });
